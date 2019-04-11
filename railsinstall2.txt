@@ -1,0 +1,11 @@
+sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
+sudo yum install gcc
+sudo yum install gcc-c++
+sudo yum install sqlite-devel
+sudo yum install ruby-devel
+
+https://www.ryadel.com/en/centos-linux-make-g-command-not-found-how-to-fix/
+rails new blog
+bundle install
+bundle update
+rails server
