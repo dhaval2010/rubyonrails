@@ -1,0 +1,10 @@
+gem install bundler -v 1.17.3
+rails new blog
+sudo yum install ruby-devel
+grep -B1 -i optional /etc/yum.repos.d/*
+sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
+sudo yum install ruby-devel
+sudo yum install gcc
+sudo yum install sqlite-devel
+https://www.ryadel.com/en/centos-linux-make-g-command-not-found-how-to-fix/
+yum install gcc-c++
