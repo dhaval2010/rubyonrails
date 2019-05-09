@@ -1,21 +1,21 @@
-    
-sudo yum install -y ruby
-grep -B1 -i optional /etc/yum.repos.d/*
-sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
-sudo yum install -y ruby-devel
-sudo yum install -y  mysql-devel
-sudo yum install -y gcc gcc-c++ 
-gem install mysql2
+Setup EC2 Using below AMI:
+     AMI ID : Hard_RHEL7_Apr19-69f7c944-5529-4d25-902f-96ed849aa0a7-ami-06d21cb19bc9bd71c.4 (ami-09c1c4d5523c821c3)
 
-gem install nokogiri -v 1.6.0
-gem install rails -v 4.2.5
-gem install bundler -v 1.17.3
+Execute below commands:
 
+    sudo yum install -y ruby
+    sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
+    sudo yum install -y gcc gcc-c++ 
+    sudo yum install -y ruby-devel
+    sudo yum install -y  mysql-devel
 
-rails new my-app -d mysql
+    gem install nokogiri -v 1.6.0
+    gem install rails -v 4.2.5
+    gem install bundler -v 1.17.3
 
-change Gemfile
+    rails new my-app -d mysql
 
-bundle install
-rails server -b 0.0.0.0 -p 3000
+    change Gemfile
 
+    bundle install
+    rails server -b 0.0.0.0 -p 3000
