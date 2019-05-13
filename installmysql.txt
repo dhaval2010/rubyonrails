@@ -3,19 +3,42 @@ Setup EC2 Using below AMI:
 
 Execute below commands:
 
+On Jenkins Server:
+
     sudo yum install -y ruby
     sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
     sudo yum install -y gcc gcc-c++ 
     sudo yum install -y ruby-devel
     sudo yum install -y  mysql-devel
 
-    gem install nokogiri -v 1.6.0
-    gem install rails -v 4.2.5
-    gem install bundler -v 1.17.3
+    With jenkins user:
+         gem install bundler -v 1.17.3
+
+  Jenkins Job:
+     bundle install
+     bundle package
+     Upload the packaged directory into Nexus
+
+On EC2:
+Initial Setup:
+    sudo yum install -y ruby
+    sudo yum-config-manager --enable rhui-REGION-rhel-server-optional
+    sudo yum install -y gcc gcc-c++ 
+    sudo yum install -y ruby-devel
+    sudo yum install -y  mysql-devel
+
+    With operating user (centos):
+         gem install bundler -v 1.17.3
+
+  While Deploying:
+     Download packaged version
+     Execute below commands:
+         bundle install --local
+         rails server -b 0.0.0.0 -p 3000
+
+Other Commands:
 
     rails new my-app -d mysql
-
     change Gemfile
-
     bundle install
     rails server -b 0.0.0.0 -p 3000
