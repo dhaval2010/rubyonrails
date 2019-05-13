@@ -9,9 +9,9 @@ Execute below commands:
     sudo yum install -y ruby-devel
     sudo yum install -y  mysql-devel
 
-    sudo gem install nokogiri -v 1.6.0
-    sudo gem install rails -v 4.2.5
-    sudo gem install bundler -v 1.17.3
+    gem install nokogiri -v 1.6.0
+    gem install rails -v 4.2.5
+    gem install bundler -v 1.17.3
 
     rails new my-app -d mysql
 
