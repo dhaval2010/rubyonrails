@@ -42,3 +42,13 @@ Other Commands:
     change Gemfile
     bundle install
     rails server -b 0.0.0.0 -p 3000
+
+
+
+
+
+
+[OPTIONAL]==================================
+sudo yum-config-manager --enable rhui-rhel-7-for-arm-64-rhui-optional-rpms
+sudo yum makecache
+sudo yum install -y ruby-devel
